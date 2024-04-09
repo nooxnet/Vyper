@@ -1542,17 +1542,25 @@
  *    +-------------->X     +-------------->X     +-------------->Y
  *     XY_SKEW_FACTOR        XZ_SKEW_FACTOR        YZ_SKEW_FACTOR
  */
-//#define SKEW_CORRECTION
+#define SKEW_CORRECTION
 
 #if ENABLED(SKEW_CORRECTION)
   // Input all length measurements here:
-  #define XY_DIAG_AC 282.8427124746
-  #define XY_DIAG_BD 282.8427124746
-  #define XY_SIDE_AD 200
+//   #define XY_DIAG_AC 282.8427124746
+//   #define XY_DIAG_BD 282.8427124746
+//   #define XY_SIDE_AD 200
+// noox: Based on Calibration Flower 08.04.2024
+	#define XY_DIAG_AC 99.5333
+	#define XY_DIAG_BD 99.85
+	#define XY_SIDE_AD 70.4573
+
 
   // Or, set the default skew factors directly here
   // to override the above measurements:
-  #define XY_SKEW_FACTOR 0.0
+  //#define XY_SKEW_FACTOR 0.0
+// noox: Based on Calibration Flower 08.04.2024
+ 	//#define XY_SKEW_FACTOR -0.002465
+
 
   //#define SKEW_CORRECTION_FOR_Z
   #if ENABLED(SKEW_CORRECTION_FOR_Z)
